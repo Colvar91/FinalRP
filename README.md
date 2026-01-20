@@ -1,58 +1,45 @@
-# RP Chat Window (Dalamud Plugin)
+# RP Chat Window (Prototype) – Test ZIP
 
-A dedicated roleplay chat window for **Final Fantasy XIV (Dalamud)** that makes RP conversations easier to read and long posts easier to write.
+Dieses ZIP enthält ein lauffähiges **Prototype-Dalamud-Plugin** mit einem **eigenen RP-Chatfenster**:
 
-## Features
+- Eigenes Chat-Window (wie „Chat 2“, aber minimal)
+- **Emotes orange**, „gesprochene“ Nachrichten weiß
+- Basic Filter (Say / Emote / Tell / Party / Yell/Shout)
+- Search
+- **Composer** mit „Split & Clipboard-Queue“ für lange RP-Posts
 
-- **Custom RP Chat Window**
-  - Separate from the default FFXIV chat log
-  - Designed to feel similar to “Chat 2”, but focused on roleplay
+## Voraussetzungen
 
-- **RP-friendly formatting**
-  - **/s (Say):** normal text shown in **white**
-  - **Inline emotes inside /s** are highlighted in **orange**
-    - `*...*`
-    - `<...>`
-  - **/em (Emote):** the whole message is shown in **orange**
-    - Text inside quotes `"..."` is shown in **white** (spoken dialogue)
-  - Emotes are rendered in an FFXIV-style format:
-    - `Name text` (no colon)
+- Aktuelles Dalamud API 14 (Stable)
+- **.NET 10** SDK (für API 14)
+- Visual Studio / Rider
 
-- **No timestamps**
-  - Messages are displayed as `Name: Text`
-  - Emotes are displayed as `Name Text`
+## Build
 
-- **Word-like line wrapping**
-  - Long lines automatically wrap downwards
-  - Nothing disappears off the right side of the window
+1. `RPChatWindow.sln` öffnen
+2. `Release` builden
 
-- **Composer (Writing Box)**
-  - Paste text from Word or anywhere else
-  - **Enter = Send**
-  - **Shift + Enter = New line**
-  - Automatically **splits long messages** to respect the in-game chat limit
+Die DLL findest du dann unter:
 
-- **Filters & Search**
-  - Toggle channels: Say / Emote / Tell / Party / Yell / Shout
-  - Search messages in the log
+`RpChatWindow/bin/Release/net10.0-windows/RpChatWindow.dll`
 
-- **Settings Button**
-  - Extra options are accessible through a **Settings** menu so nothing goes out of view
+## In-Game testen (Dev Plugin)
 
----
+1. Spiel starten
+2. `/xlsettings` → **Experimental** → **Dev Plugin Locations**
+3. Pfad zur **RpChatWindow.dll** hinzufügen (oder den Ordner)
+4. `/xlplugins` → **Dev Tools** → Installed Dev Plugins → `RP Chat Window` aktivieren
 
-## Installation
+Dann im Chat:
 
-This plugin is currently meant to be tested as a **Dev Plugin**.
+- `/rpchat` = Fenster toggeln
 
-### Requirements
-- **Dalamud API 14**
-- **.NET 10 SDK**
-- **Visual Studio Code** (or Visual Studio / Rider)
+## Hinweise
 
-### Build (VS Code)
-Open the project folder and run:
+- Das Server-Chatlimit kann ein Plugin **nicht entfernen**. Der Composer splittet und kopiert die Chunks in die Zwischenablage.
+- **Auto-Senden als Charakter ist über die öffentliche Dalamud-API nicht vorgesehen.**
+  Darum nutzt dieses Plugin einen sicheren Workflow: Beim Senden wird **Chunk 1/N** in die Zwischenablage kopiert.
+  Du fügst ihn im normalen Chat mit **Strg+V** ein und drückst Enter.
+  Sobald deine Nachricht im Chat erscheint, kopiert das Plugin automatisch den nächsten Chunk.
+- MVP rendert aktuell Plaintext. Später kann man echte SeString-Payloads (Icons, Links, etc.) sauber rendern.
 
-```powershell
-dotnet restore
-dotnet build -c Release
