@@ -1,0 +1,18 @@
+{
+  "Author": "Colvar",
+  "Name": "FinalRP",
+  "InternalName": "FinalRP",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "RP-focused chat window with inline emote highlighting and a scratchpad-style composer.",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "Chat,Roleplay,RP"
+  ],
+  "DalamudApiLevel": 14,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "Punchline": "Roleplay-focused chat window and composer.",
+  "AcceptsFeedback": true
+}
