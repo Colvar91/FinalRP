@@ -1,18 +1,18 @@
-{
-  "Author": "Colvar",
-  "Name": "FinalRP",
-  "InternalName": "FinalRP",
-  "AssemblyVersion": "1.0.0.0",
-  "Description": "RP-focused chat window with inline emote highlighting and a scratchpad-style composer.",
-  "ApplicableVersion": "any",
-  "Tags": [
-    "Chat,Roleplay,RP"
-  ],
-  "DalamudApiLevel": 14,
-  "LoadRequiredState": 0,
-  "LoadSync": false,
-  "CanUnloadAsync": false,
-  "LoadPriority": 0,
-  "Punchline": "Roleplay-focused chat window and composer.",
-  "AcceptsFeedback": true
-}
+[
+  {
+    "Author": "Colvar",
+    "Name": "FinalRP",
+    "Punchline": "RP chat window + scratchpad composer for FFXIV.",
+    "Description": "RP-focused chat window for FFXIV, includes scratchpad-style composer and auto-splitting.",
+    "InternalName": "FinalRP",
+    "AssemblyVersion": "0.1.0.0",
+    "RepoUrl": "https://github.com/Colvar91/FinalRP",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 14,
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkInstall": "https://github.com/Colvar91/FinalRP/releases/download/v0.1.0/FinalRP.zip",
+    "DownloadLinkUpdate": "https://github.com/Colvar91/FinalRP/releases/download/v0.1.0/FinalRP.zip",
+    "LastUpdate": "1760000000"
+  }
+]
