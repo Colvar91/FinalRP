@@ -3,7 +3,7 @@
     "Author": "Colvar",
     "Name": "FinalRP",
     "Punchline": "RP chat window + scratchpad composer for FFXIV.",
-    "Description": "RP-focused chat window for FFXIV, includes scratchpad-style composer and auto-splitting.",
+    "Description": "RP-focused chat window for FFXIV. /s supports inline emotes (*...* / <...>) in orange. /em is orange with quoted dialogue \"...\" in white. Includes scratchpad-style composer and auto-splitting.",
     "InternalName": "FinalRP",
     "AssemblyVersion": "0.1.0.0",
     "RepoUrl": "https://github.com/Colvar91/FinalRP",
@@ -11,8 +11,8 @@
     "DalamudApiLevel": 14,
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkInstall": "https://github.com/Colvar91/FinalRP/releases/download/v0.1.0/FinalRP.zip",
-    "DownloadLinkUpdate": "https://github.com/Colvar91/FinalRP/releases/download/v0.1.0/FinalRP.zip",
+    "DownloadLinkInstall": "https://github.com/Colvar91/FinalRP/releases/download/v0.1.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/Colvar91/FinalRP/releases/download/v0.1.0/latest.zip",
     "LastUpdate": "1760000000"
   }
 ]
